@@ -2,10 +2,24 @@
 <html lang="ru">
     <head>
         <title>Главная страница</title>
+        <style>
+            td {border: solid 1px black;
+            }
+            th{ color: brown;
+            }
+            table {border border-collapse: collapse ; width: 50%;
+            }
+
+        </style>
     </head>
 
     <body>
         <h1>Мой первый сайт</h1>
+        <a href="#table-1">
+        <img src="img/information_items_property_254476.webp" alt="Мое изображение" width="300px" height="200" />
+        </a>
+
+
         <p>Главная</p>
         <p>Проекты</p>
         <p>Наши проекты</p>
@@ -33,9 +47,11 @@
             <li>Обычный</li>
         </ol>
 
+        <img src="img/ff3ec44430109cecb5244b8a658133a9.jpg" alt="Мое изображение" width="300px" height="200" />
+
         <h2 style="color: rgb(12, 244, 77);">Стройматериал</h2>
         <!--Что необходима -->
-    
+
         <details>
         <summary>Материалы</summary>
         <ul>
@@ -46,6 +62,37 @@
             <li style="color: chocolate;">Вода</li>
         </ul>
         </details>
+
+        <img src="img/ed3772b2fb401152e138f68e034c9ee5.png" alt="Мое изображение" width="300px" height="200" />
+
+        <table id="table-1" class="table-1">
+            <thead>
+              <tr>
+                <th>Имя</th>
+                <th>Фамилия</th>
+                <th>Телефон</th>
+              </tr>  
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Иванов</td>
+                    <td>Иван</td>
+                    <td>89996633</td>
+                </tr>
+
+                <tr>
+                    <td>Иванов</td>
+                    <td>Иван</td>
+                    <td>89996633</td>
+                </tr>
+
+                <tr>
+                    <td>Иванов</td>
+                    <td>Иван</td>
+                    <td>89996633</td>
+                </tr>
+            </tbody>
+        </table>
     </body>
 
 </html>

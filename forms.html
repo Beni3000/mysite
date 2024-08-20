@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Формы</title>
+    </head>
+    <body>
+        <form action="#" method="post" enctype="application/x-www-form-urlencoded">
+            <p>
+            <label for="login">Логин:</label>
+            <input id="login" name="login" type="text" placeholder="Логин" maxlength="5"/>
+            </p>
+
+            <p>
+            <label for="password">Пароль:</label>
+            <input name="password" type="password" placeholder="Пароль"/>
+            </p>
+
+            <p>
+            <label for="phone">Телефон:</label>
+            <input name="phone" type="text" value="123456789" disabled/>
+            </p>
+
+            <p>
+                <label for="age">Возраст:</label>
+                <input name="age" type="number" min="12" max="120" step="2"/>
+                </p>
+
+            <p>
+            <label for="rbutton">Радео-кнопка:</label>
+            <input name="password" type="radio"/>
+            </p>
+
+            <p>
+            <input type="submit" value="Войти"/>
+            </p>
+        </form>
+    </body>
+</html>
