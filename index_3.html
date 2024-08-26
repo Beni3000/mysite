@@ -3,65 +3,63 @@
         <title>Sections</title>
     </head>
     <style>
-        /*
-        padding: 1px;- применяется для всех сторон
-        padding: 10px 20px; - top and bottom / left and right
-        padding: 10px 20px 30px; - top / left and right / botton
-        padding: 5px 1px 0 10px; - top /right / bottom /left 
-        */
-        body {
+        /* 
+        padding: 1px; - применяется для всех сторон
+        padding: 10px 20px; - top and bottom | left and right
+        padding: 10px 20px 30px; - top | left and right | bottom
+        padding: 5px 1px 0 10px; - top | right | bottom | left
+         */
+        body{
             font-family: Arial, Helvetica, sans-serif;
             margin: 0;
             padding: 0;
         }
         header{
             background-color: rgb(18, 24, 24);
-            color: rgb(248, 240, 240);
+            color: white;
             padding-top: 10px;
             padding-bottom: 20px;
             text-align: center;
         }
         
-
-        main {
-            display:flex;
+        main{
+            display: flex;
             padding: 20px;
         }
-
+        
         article{
             flex: 3;
             margin-right: 20px;
         }
-        
-    
+
         footer {
-            background-color: black;
-            color: aliceblue;
+            background-color: #2b2b2b;
+            color: white;
             text-align: center;
             padding-top: 10px;
-            padding-top: 20px;
+            padding-bottom: 20px;
             position: absolute;
-            bottom: 0;
+            bottom: 25px;
             width: 100%;
         }
+       
 
     </style>
     <body>
         <header>
-            Заголовок сайта (верхнее меню)
+            Заголовок сайта (верхнее меню) 
         </header>
         <main>
-    
             <article>
-                <h2>Оснавная страница</h2>
+                <h2>Основная статья</h2>
                 <section>
                     <h3>Раздел 1</h3>
-                    <p>Это содержимое второго раздела оснавной статьи</p>
+                    <p>Это содержимое первого раздела основной статьи</p>
                 </section>
                 <section>
-                     <h3>Раздел 2</h3>
-                     <p>Это содержимое второго раздела оснавной статьи</p>
-                </section>           
+                    <h3>Раздел 2</h3>
+                    <p>Это содержимое второго раздела основной статьи</p>
+                </section>
             </article>
 
             <aside>
@@ -70,7 +68,7 @@
             </aside>
         </main>
         <footer>
-            <p>&copy; 2024 Пример сайта. Все прова защищены</p>
+            <p>&copy; 2024 Пример сайта. Все права защищены.</p>
         </footer>
     </body>
 </html>
