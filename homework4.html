@@ -2,5 +2,90 @@
 <html>
     <head>
     <title>Главная страница</title>
+    <link rel="stylesheet" href="css/styles1.css">
 </head>
+<style>
+    body{
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+    header{
+        background-color: rgb(20, 230, 230);
+        color: rgb(34, 11, 236);
+        padding-top: 20px;
+        padding-bottom: 20px;
+        text-align: center;
+    }
+    
+    main{
+        display: flex;
+        padding: 20px;
+    }
+    
+    
+
+    footer {
+        background-color: #f30b0b;
+        color: rgb(8, 5, 5);
+        text-align: center;
+        padding-top: 0px;
+        padding-bottom: 0px;
+        position: absolute;
+        bottom: 25px;
+        width: 100%;
+    }
+   
+
+</style>
+  
+<body>
+    <header>
+        <a href="#">
+        <p>Каркасные дома</p>
+        </a>
+
+        <a href="#">
+        <p>Фундамент</p>
+        </a>
+        
+        <a href="#">
+        <p> Стройматериал</p>
+        </a>
+    </header>
+    
+    <main>
+        <article>
+            <div id="cont-1" class="container">
+                <p>Абзац внутри контейнера</p>
+                <div class="main-title">
+                   Дома
+                   <p>Абзац внутри заголовка</p>
+                </div>
+                <div class="main-img">
+                     <img src="img/information_items_property_254476.webp" width="300px" height="200px">
+                </div>
+                <div class="main-text">
+                    Каркасные
+                </div>
+            </div>
+            <div id="cont-2" class="container">
+                <div class="main-title">
+                   Фундамент
+                </div>
+                <div class="main-img">
+                     <img src="img/ff3ec44430109cecb5244b8a658133a9.jpg" width="300" height="200">
+                </div>
+                <div class="main-text">
+                    Материалы
+                </div>
+            </div>
+            
+        </article>
+    </main>
+    <footer>
+        <p>&copy; 2024 Пример сайта. Все права защищены.</p>
+    </footer>
+</body>
+    
 </html>
