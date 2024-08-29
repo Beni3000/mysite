@@ -1,0 +1,41 @@
+.input-form{
+    width: 300px;
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid;
+    border-radius: 8px;
+    background: aqua;
+}
+
+.input-group{
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background: #fff;
+    box-sizing: border-box;
+}
+
+.input-group  {
+    border-color: #074adb;
+    outline: none;
+}
+
+.input-group botton {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    background: #074adb;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.input-form button:hover {
+ background: #0056b3;
+} 
