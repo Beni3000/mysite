@@ -1,0 +1,48 @@
+.input-form {
+    width: 300px;
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 16px;
+    background: linear-gradient(to left, rgb(6, 158, 140), rgb(179, 245, 237))
+}
+
+.input-grup {
+    margin-bottom: 20px
+}
+
+.input-grup label{
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+    font-weight: bold;
+}
+
+.input-grup input{
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background: #e6e4e4
+}
+
+.input-grup input:focus{
+  border-color: #007bff;
+  outline: none;
+}
+
+.input-form button{
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    background: #036bfc;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.input-form button:hover{
+    background: #0056b3;
+}
