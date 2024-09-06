@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Blocks</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  </head>
+  <body>
+    <header class="bg-success text-white text-center py-3">
+        <h1>Строительство домов</h1>
+    </header>
+    <div class="container">
+        <div class="row">
+        <form class="row g-3">
+            <div class="col-md-6">
+            <label for="inputEmail4" class="form-label">Email</label>
+            <input type="email" placeholder="Email" class="form-control" id="inputEmail4">
+            </div>
+            <div class="col-md-6">
+            <label for="inputPassword4" class="form-label">Password</label>
+            <input type="password" placeholder="Password" class="form-control" id="inputPassword4">
+            </div>
+            <div class="col-12">
+            <label for="inputAddress" class="form-label">Адрес</label>
+            <input type="text" placeholder="Адрес" class="form-control" id="inputAddress" placeholder="1234 Main St">
+            </div>
+            <div class="col-md-6">
+            <label for="inputCity" class="form-label">Город</label>
+            <select id="inputState" class="form-select">
+                <option selected>Выбрать...</option>
+                <option>Москва</option>
+                <option>Санкт-Петербург</option>
+                <option>Новгород</option>
+            </div>
+            <div class="col-12">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="gridCheck">
+                  <label class="form-check-label" for="gridCheck">
+                    Проверить меня
+                  </label>
+                </div>
+              </div>
+              <div class="col-12">
+                <button type="submit" class="btn btn-primary">Войти</button>
+              </div>
+        </form>
+        </div>
+    </div>
+    <div class="container my-5">
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">№</th>
+            <th scope="col">Дом</th>
+            <th scope="col">Тип</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>68 м.2</td>
+            <td>Газобетон</td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>128 м.2</td>
+            <td>Каркасный</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="container" >
+        <div id="carouselExample" class="carousel slide">
+            <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="img/213.jpg" class="d-block w-100" alt="Дома">
+            </div>
+            <div class="carousel-item">
+                <img src="img/images.jpg" class="d-block w-100" alt="Дома">
+            </div>
+            <div class="carousel-item">
+                <img src="img/Stroitelstvo-elitnogo-zagorodnogo-doma-v-Sankt-Peterburge.jpg" class="d-block w-100" alt="Дома">
+            </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  </body>
+</html>  
