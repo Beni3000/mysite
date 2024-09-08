@@ -1,0 +1,43 @@
+header{
+    background-color: rgb(236, 208, 25);
+    color: rgb(20, 18, 18);
+    padding-top: 10px;
+    text-align: center;
+}
+
+article{
+    flex: 3;
+    margin-right: 20px;
+}
+
+.main1 {
+    display: ruby;
+    padding: 1px;
+}
+
+aside {
+    padding-left: 100px;
+    display: block;
+    unicode-bidi: isolate;
+}
+
+section{
+    padding-right: 500px;
+}
+
+.div1{
+    padding-right: 15px;
+}
+
+.div2{
+    padding-right: 15px;
+}
+
+.div3{
+    padding-right: 15px;
+}
+
+main{
+    display: flex;
+    padding: 20px;
+}
