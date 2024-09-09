@@ -37,7 +37,34 @@ section{
     padding-right: 15px;
 }
 
-main{
+.container{
     display: flex;
+    padding: 100px;
+    padding-left: 12%;
+}
+
+.div5{
+    width: 50%;
+    margin-left: 3px;
     padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 16px;
+    background: linear-gradient(to left, rgb(226, 223, 195), rgb(211, 202, 99));
+}
+
+.button{
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    background: #e8b406;
+}
+
+body {
+    background: linear-gradient(to left, rgb(120, 225, 29), rgb(63, 105, 57));
+}
+
+footer {
+    color: white;
+    text-align: center;
+    width: 100%;
 }
