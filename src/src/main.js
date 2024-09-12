@@ -64,3 +64,63 @@ let res = last + input.slice(0, 4);
 alert("Ваше число теперь: " + res);
 */
 
+/* 12.09
+window. onload = function () {
+    function foo() {
+        let x = Number(prompt("Введите число x: "));
+        let a;
+        a = prompt("Введите число a: ");
+        a = Number(a);
+        const k = 3.141592;
+        let y = k * x + a * x ** 2;
+        alert("Результат выполнения функции равен "+ y);
+    }
+    foo();
+};
+*/
+
+function calc(a, b, operation){
+    if (operation == "+"){
+      return a + b;
+    }
+    else if (operation == "-"){
+      return a - b;
+    }
+    else if (operation == "*"){
+      return a * b;
+    }
+    else if (operation == "/"){
+
+      if (b == 0){
+         return "Делить на ноль нельзя!";
+     }else {
+      return a / b;
+      }
+    } 
+    else {
+       return "Неизвесная операция. Попробуй еще раз";
+    }  
+}
+
+function calcPaS() {
+    let x = Number(document.getElementById("num1").value);
+    let y = Number(document.getElementById("num2").value);
+    let op = document.getElementById("operation").value;
+    console.log(x, y, op);
+    let res = calc(x, y, op);
+    alert("Результат операции: " + res);
+}
+
+window.onload = () => {
+   let buttonCalc = document.getElementById("calculator");
+   buttonCalc.addEventListener("click", calcPaS);
+};
+
+/*
+et x = Number(prompt("ВВедите первое число: "));
+   let y = Number(prompt("ВВедите второе число: "));
+   let op = prompt("Введите тип операции (+, -, *, /)");
+   let res = calc(x, y, op);
+   alert("Результат вашей операции " + res); 
+};
+*/
