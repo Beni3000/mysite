@@ -1,6 +1,10 @@
 /*
+console. log("Hello from Javascript");
+*/
+/*
 alert("Hello from Javascript");
 confirm("Согласны, узнали?");
+*/
 /*
 uddefined - неинициализированные значения
 null - флаг отсутствия значений (либо нуливое значение)
@@ -15,6 +19,11 @@ object - переставление объекта языка JavaScript
 Инкремент:
 --x или X-- <=> x-1
 */
+
+alert("Укажите ваше имя:");
+let ans;
+ans = prompt();
+alert("Ваше имя - " + ans);
 
 /*let ans;
 ans = prompt("Введите код операции");
