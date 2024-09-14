@@ -28,6 +28,17 @@ alert("Площадь квадрата равна: " + square);
 /*
 4 задание
 */
-const PI = 3,14;
-let x = Number(prompt("Введите радиус круга: "));
-alert("Площадь круга равна: " + x * PI);
+/*
+let r = Number(prompt("Введите радиус круга:"));
+let circle = Math.PI * r * r;
+alert("Площадь круга равна: " + circle);
+*/
+
+/*
+4 задание
+*/
+/*
+let l = +prompt("Введите расстояние")
+let time = +prompt("Введите время")
+alert(l/time + "км/ч")
+*/
