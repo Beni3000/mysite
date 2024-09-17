@@ -1,71 +1,26 @@
-header{
-    background-color: rgb(236, 208, 25);
+body {
+    background-image: url('../img/PISCtfAF5z-ZTTtAnq2UTq1FFcU-960.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  header{
+    background-color: rgb(239, 238, 232);
     color: rgb(20, 18, 18);
     padding-top: 10px;
+    background-size: cover;
+}
+
+.header1{
     text-align: center;
-}
-
-article{
-    flex: 3;
-    margin-right: 20px;
-}
-
-.main1 {
-    display: ruby;
-    padding: 1px;
-}
-
-aside {
-    padding-left: 100px;
-    display: block;
-    unicode-bidi: isolate;
-}
-
-section{
-    padding-right: 500px;
-}
-
-.div1{
-    padding-right: 15px;
-}
-
-.div2{
-    padding-right: 15px;
-}
-
-.div3{
-    padding-right: 15px;
-}
-
-.container{
-    display: flex;
-    padding: 100px;
-    padding-left: 12%;
-}
-
-.div5{
-    width: 50%;
-    margin-left: 3px;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 16px;
-    background: linear-gradient(to left, rgb(226, 223, 195), rgb(211, 202, 99));
-}
-
-.button{
-    padding: 10px;
-    border: none;
-    border-radius: 4px;
-    background: #e8b406;
-}
-
-body {
-    background: linear-gradient(to left, rgb(120, 225, 29), rgb(63, 105, 57));
-    border: 1px solid #ccc;
 }
 
 footer {
-    color: white;
+    background-color: #f6f5f5;
+    color: rgb(10, 9, 9);
     text-align: center;
+    padding-top: 10px;
+    position: absolute;
+    bottom: 25px;
     width: 100%;
 }
