@@ -177,3 +177,104 @@ et x = Number(prompt("ВВедите первое число: "));
    alert("Результат вашей операции " + res); 
 };
 */
+
+/*
+17.09.
+*/
+/*
+let user = new Object();
+let user = {};
+*/
+
+/*
+let user = {
+  name: "Dmitrii",
+  age: 27,
+}
+
+console.log(user.name);
+console.log(user ["age"]);
+
+user.isAdmin = true
+delete user.age
+
+console.log(user);
+*/
+
+/*
+let fruit = prompt("Введите свой любимый фрукт");
+
+let user = {
+  name: "Dmitrii",
+  surname: "Ver",
+  age: 41,
+  height: 175,
+  city: "Spb",
+  alert: true,
+  [fruit]: "favouritte",
+}
+
+console.log(user.name);
+console.log(user ["age"]);
+
+user.isAdmin = true
+delete user.age
+
+console.log(user);
+*/
+
+/*
+let rectangle = {
+  a: 0,
+  b: 0,
+  c: 0,
+  d: 0,
+}
+
+function set_rectangle(o) {
+  A = prompt ("Введите координаты первой точки (через запятую):");
+  o.A = A;
+  B = prompt ("Введите координаты первой точки (через запятую):");
+  o.B = B;
+  C = prompt ("Введите координаты первой точки (через запятую):");
+  o.C = C;
+  D = prompt ("Введите координаты первой точки (через запятую):");
+  o.D = D;
+}
+
+function rectangleInfo(o) {
+  alert(
+    `Точка A: (${o.A})\nТочка B: (${o.B})\nТочка C: (${o.C})\nТочка D: (${o.D})`
+
+  );
+}
+
+*/
+let rectangle = {
+  a: null,
+  b: null,
+  c: null,
+  d: null,
+}
+
+function set_rectangle(o) {
+  A = prompt ("Введите координаты первой точки (через запятую):");
+  o.A = A;
+  B = prompt ("Введите координаты первой точки (через запятую):");
+  o.B = B;
+  C = prompt ("Введите координаты первой точки (через запятую):");
+  o.C = C;
+  D = prompt ("Введите координаты первой точки (через запятую):");
+  o.D = D;
+}
+
+function rectangleInfo(o) {
+  alert(
+    `Точка A: (${o.A})\nТочка B: (${o.B})\nТочка C: (${o.C})\nТочка D: (${o.D})`
+
+  );
+}
+
+function getWidth(o) {
+  alert(`Ширена прямоугольника: ${Number(o.B[o]) - Number (o.A[o])}`);
+}
