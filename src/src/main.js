@@ -276,5 +276,9 @@ function rectangleInfo(o) {
 }
 
 function getWidth(o) {
-  alert(`Ширена прямоугольника: ${Number(o.B[o]) - Number (o.A[o])}`);
+  alert(`Ширена прямоугольника: ${Number(o.B[0]) - Number (o.A[0])}`);
+}
+
+function getHeight(o) {
+  alert(`Высота прямоугольника: ${Number(o.A[2] - Number(o.D[2]))}`);
 }
