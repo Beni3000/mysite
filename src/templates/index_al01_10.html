@@ -27,12 +27,113 @@
         console.log("3");
       }  
     </script>  --> 
-    <script>
+    <!-- <script>
         const myArray = [];
         const people = ["Tanya", "Ivan", "Igor"];
         console.log(people);
         console.log(people[1]);
         people[10] = "Sergey"
         console.log(people[3]); 
+    </script> -->
+     <script>
+      function hello(name){
+        console.log(`Hello, ${name}`)
+      }
+
+      function sumNumbers(a,b){
+        console.log(`${a} + ${b} = ${a+b}`)
+      }
+
+      function info(name, age, city){
+        console.log(`Hello, my name is ${name}. I am${age} years old. I am from ${city}`)
+      }
+
+      const message = function(msg){
+        console.log(msg)
+      }
+
+      function print(){
+        console.log("Outer function");
+        printHello();
+        printHello();
+
+        function printHello(){
+          console.log("inner function")
+        }
+      }
+
+      const sumNumFunction = sumNumbers;
+
+      info("Ivan", 17, "Moscow")
+      sumNumbers(7,9)
+      hello("Ivan") 
+      sumNumFunction(8,8)
+
+      message("Function without name")
+
+      print()
+
+      function printPerson(person){
+        console.log("Name", person[0]);
+        console.log("Age",person[1]);
+        console.log("Email:", person[2]);
+      }  
+
+      function printPersonSpreand(name, age, email){
+        console.log("Name", name);
+        console.log("Age", age);
+        console.log("Email:", email);
+      }
+
+      const Ivan = ["Ivan", 28, "Ivan@gmail.com"]
+
+      // printPerson(Ivan)
+
+      // printPersonSpreand(... Ivan)
+
+      function sumAnyElements(a,b){
+        console.log(`a = ${a}`)
+        console.log(`b = ${b}`)
+
+        let result = 0;
+        for (const n of arguments){
+          result += n;
+        }
+        console.log("Сумма чисел", result);
+      }
+
+      //sumAnyElements(5)//
+      //sumAnyElements(5,4)//
+      //sumAnyElements(5,4,1)//
+      //sumAnyElements(5,5,5,5)//
+
+      function getName(name){
+        const newName = `${name}!`
+        return newName
+      }
+
+      let newName = getName("Ivan")
+      console.log(newName)
+
+      function getSum(a,b){
+        const result = a+b
+        return result
+      }
+
+      function getSubtract(a,b){
+        const result = a-b
+        return result
+      }
+
+      function operation(a, b, func){
+        const result = func(a,b)
+        return result
+      }
+
+
+      console.log
+
+
     </script>
+    
 </html>
