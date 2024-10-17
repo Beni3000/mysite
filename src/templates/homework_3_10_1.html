@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Homework 03.10/1</title>
+    </head>
+    <body>
+         JavaScript
+    </body>
+    <script>
+const cars = [
+    ["Toyota", "avensis", 2022],
+    ["Lexus", "rx450", 2022],
+    ["bHonda", "civic", 2021]
+];
+
+
+const carInfo = (carsArray) => {
+    carsArray.forEach((car, index) => {
+        console.log(`${index + 1} машина:`);
+        console.log(`марка - ${car[0]}`);
+        console.log(`модель - ${car[1]}`);
+        console.log(`год выпуска - ${car[2]}`);
+        console.log('-------------------'); 
+    });
+};
+
+carInfo(cars);
+    </script>
+</html>
