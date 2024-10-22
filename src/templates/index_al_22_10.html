@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>lesson 22.10. Events</title>
+    </head>
+    <body>
+      <form action="" id="myForm" name="myform">
+        <input type="text" name="phone" id="phone">
+        <label for="phone">Телефон</label>
+
+        <input type="text" name="email" id="email">
+        <label for="email">Почта</label>
+
+        
+
+        <input type="button" name="send" id="sendBtn" value="Отправить()">
+        <button type="submit">Отправить</button>
+
+      </form>
+
+      <div onclick="alert('Обработчик!')">
+        <em>Если вы кликните на<code>EM</code>, сработает обработчик на <code>DIV</code></em>
+      </div>
+      <dr>
+      </dr>
+
+      <form onclick="alert('for')">FORM
+        <div onclick="alert('div')">DIV
+            <p onclick="alert('p')">P</p>
+        </div>
+      </form>
+
+    </body>
+    <script>
+       function handlesSubmit(event){
+           const phoneField = document.querySelector('#phone').value
+           const emailField = document.querySelector('#email').value
+
+           console.log(`Phone - ${phoneField}, Email - ${emailField}`)
+           console.log(`Тип события: ${event.type}`)
+           console.log(`Цель: ${event.currentTarget}`)
+
+       }
+
+       function hello(){
+        alert('Hello!')
+       }
+
+       function bye(){
+        alert('Bye!')
+       }
+
+       const myForm = document.querySelector('#myForm')
+       const myButton = document.querySelector('#sendBtn')
+
+       myForm.addEventListener('submit', handlesSubmit)  
+       myButton.addEventListener('click', handlesSubmit)
+
+       myForm.removeEventListener('submit', handlesSubmit)  
+
+       myButton.addEventListener('click', handlesSubmit)
+       myButton.addEventListener('click', hello)
+       //myButton.addEventListener('click', bye)
+       myButton.addEventListener('click', ()=>{alert('bye')})
+       myButton.removeEventListener('click', ()=>{alert('bye')})
+
+
+
+    </script>
+</html>

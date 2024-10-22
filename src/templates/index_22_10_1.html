@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>lesson 22.10. Events</title>
+    </head>
+    <body>
+
+
+    </body>
+
+
+    <script>
+    // function callSomeFunc(){
+    //     console.log("Функция callSomeFunc")
+    // } 
+    // try {   
+    //     callSomeFunc();
+    //     console.log("Конец блока try")
+    // }
+
+    // catch(error) {
+    //     console.log('Возникла ошибка')
+    //     console.log(error)
+    // }
+
+    // finally {
+    //     console.log('Блок finally')
+    // }
+    
+    // console.log("Осталной код")
+
+    function checkAge(age){
+        if(age>18){
+            console.log("Access approved")
+        }else{
+            throw "Access denid!!!"
+        }
+    }
+
+    try {
+        checkAge(17);
+    }
+    catch(error) {
+        console.error("Ошибка", error.messaqe)
+    }
+
+    
+
+
+    </script>
+</html>
