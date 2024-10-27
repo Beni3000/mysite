@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Homework 27.09</title>
+    </head>
+    <body>
+         JavaScript
+    </body>
+    <script>
+//Задание 1
+function compareStringLengths(str1, str2) {
+    if (str1.length > str2.length) {
+        return 1; 
+    } else if (str1.length < str2.length) {
+        return -1; 
+    } else {
+        return 0; 
+    }
+    }
+
+
+    console.log(compareStringLengths("Hello", "World")) 
+    console.log(compareStringLengths("Hello", "JavaScript")) 
+    console.log(compareStringLengths("JavaScript", "Hi")) 
+
+// Задание 2
+
+function capitalizeFirstLetter(str) {
+    if (str.length === 0) {
+        return str; 
+    }
+    return str.charAt(0).toUpperCase() + str.slice(1);
+    }
+
+    
+    console.log(capitalizeFirstLetter("hello")); 
+    console.log(capitalizeFirstLetter("world")); 
+    console.log(capitalizeFirstLetter("javascript is fun")); 
+    console.log(capitalizeFirstLetter("")); 
+
+// Задание 3
+
+const countVowels = (str) => {
+  const vowels = 'aeiouAEIOU'; 
+  let count = 0; 
+
+  for (let char of str) {
+    if (vowels.includes(char)) {
+      count++; 
+    }
+  }
+  return count; 
+};
+
+
+    console.log(countVowels("Hello")); 
+    console.log(countVowels("World")); 
+    console.log(countVowels("JavaScript is fun")); 
+    console.log(countVowels("")); 
+
+// Задание 4
+
+const containsSpam = (str) => {
+  const spamWords = ['скидка', 'бесплатно', 'акция']; 
+  const lowerStr = str.toLowerCase(); 
+  return spamWords.some(word => lowerStr.includes(word));
+};
+
+console.log(containsSpam("Просто акция!")); 
+console.log(containsSpam("Это обычный текст.")); 
+console.log(containsSpam("Скидка на все товары!")); 
+
+
+// Задание 5
+
+function truncate(str, maxLength) {
+  if (str.length > maxLength) {
+    return str.slice(0, maxLength - 3) + '...';
+  }
+  return str;
+}
+
+console.log(truncate("Hello, world", 8)); 
+console.log(truncate("Short", 10));    
+
+// Задание 6
+
+function isPalindrome(str) {
+  const cleanedStr = str.toLowerCase().replace(/\s+/g, '');
+  const reversedStr = cleanedStr.split('').reverse().join('');
+  return cleanedStr === reversedStr;
+}
+
+console.log(isPalindrome("казак")); 
+console.log(isPalindrome("шалаш")); 
+console.log(isPalindrome("привет")); 
+
+// Задание 7
+
+function countWords(sentence) {
+  const words = sentence.trim().split(/\s+/);
+  return words.length === 1 && words[0] === "" ? 0 : words.length;
+}
+
+console.log(countWords("Привет, мир!")); 
+console.log(countWords("   Это   пример   предложения   ")); 
+console.log(countWords("")); 
+
+// Задание 8
+
+function findLongestWord(sentence) {
+  const words = sentence.trim().split(/\s+/);
+  let longestWord = '';
+
+  for (const word of words) {
+    if (word.length > longestWord.length) {
+      longestWord = word;
+    }
+  }
+  return longestWord;
+}
+
+console.log(findLongestWord("Это пример предложения")); 
+console.log(findLongestWord("Кот собака лошадь")); 
+console.log(findLongestWord("")); 
+
+// Задание 9
+
+function averageWordLength(sentence) {
+  const words = sentence.trim().split(/\s+/);
+
+  if (words.length === 0) {
+    return 0; 
+  }
+
+  const totalLength = words.reduce((sum, word) => sum + word.length, 0);
+  const averageLength = totalLength / words.length;
+
+  return averageLength;
+}
+
+console.log(averageWordLength("Это пример предложения")); 
+console.log(averageWordLength("Кот собака лошадь")); 
+console.log(averageWordLength("")); 
+
+// Задание 10
+
+function lengthWord2(srt, char) {
+    const indices = [];
+
+    for (const [i, e] of [...srt].entries()) {
+        if (e === char) {
+            indices.push(i);
+        }
+    }
+
+    const count = indices.length;
+
+    console.log(`Символ '${char}' всего найден ${count} раз(а) на позициях: ${indices.join(', ')}`);
+}
+
+lengthWord2("Сегодня я была в обсерватории", "о");
+
+// Object.
+
+//Задание 1
+
+
+const person = {
+    name: "Дмитрий",
+    age: 41,
+    city: "Спб"
+};
+
+
+console.log(`Имя: ${person.name}`);
+console.log(`Возраст: ${person.age}`);
+console.log(`Город: ${person.city}`);
+
+//Задание 2
+
+const car = {
+    make: "Toyota",
+    model: "Camry",
+    year: 2020 
+};
+
+car.year = 2024
+
+console.log(`\nМарка: ${car.make}\nМодель: ${car.model}\nГод выпуска: ${car.year}`)
+
+//Задание 3
+
+
+const book = {
+    title: "Война и мир",
+    author: "Лев Толстой"
+};
+
+book.publishedYear = 1869;
+
+console.log(book);
+
+//Задание 4
+
+const student = {
+    name: "Иван",
+    grade: "10",
+    age: 16
+};
+
+console.log("До удаления:", student);
+delete student.age;
+console.log("После удаления:", student);
+
+//Задание 5
+
+const product = {
+    id: 1,
+    name: "Ноутбук",
+    price: 1200
+};
+
+function hasPrice(obj) {
+    return obj.hasOwnProperty('price');
+}
+
+const exists = hasPrice(product);
+
+console.log("Свойство 'price' существует:", exists);
+
+//Задание 6
+
+const fruits = {
+    apple: 2,
+    banana: 3,
+    orange: 5,
+    mango: 4
+};
+
+for (const fruit in fruits) {
+    if (fruits.hasOwnProperty(fruit)) {
+        console.log(`${fruit}: ${fruits[fruit]}`);
+    }
+}
+
+//Задание 7
+
+let obj1 = {
+    a: 1,
+    b: 2,
+}
+let obj2 = {
+    b: 3,
+    c: 4,
+}
+
+const mergeObj = (obj1, obj2) => {
+    return [obj1, obj2].reduce((ob, obj) => {
+        Object.entries(obj).forEach(([key, value]) => {
+            if (ob[key]) {
+                ob[key] += value;
+            } else {
+                ob[key] = value;
+            }
+        });
+        return ob;
+    }, {});
+};
+
+const mergedObj = mergeObj(obj1, obj2);
+
+console.log(mergedObj);
+
+//Задание 8
+
+const original = {
+    name: 'Alice',
+    age: 30,
+    city: 'New York'
+};
+
+const copy = { ...original }; 
+
+copy.age = 25;
+
+console.log('Original Object:', original);
+console.log('Copied Object:', copy);
+
+//Задание 9
+
+function countProperties(obj) {
+    let count = 0;
+
+    function countHelper(o) {
+        for (const key in o) {
+            if (o.hasOwnProperty(key)) {
+                count++; 
+                if (typeof o[key] === 'object' && o[key] !== null) {
+                    countHelper(o[key]); 
+                }
+            }
+        }
+    }
+    countHelper(obj); 
+    return count;
+}
+
+const exampleObject = {
+    a: 1,
+    b: { c: 2, d: { e: 3 } },
+    f: 'string',
+    g: null,
+};
+
+const propertyCount = countProperties(exampleObject);
+console.log('Количество свойств:', propertyCount);
+
+//Задание 10
+
+const user = {};
+
+user.name = 'Dmitrii';
+
+user.surname = 'Ver';
+
+user.name = 'Pete';
+
+delete user.name;
+
+console.log(user);
+
+//Задание 11
+
+
+function sumSalaries(salaries) {
+    let total = 0; 
+
+    for (const key in salaries) { 
+        if (salaries.hasOwnProperty(key)) { 
+            total += salaries[key]; 
+        }
+    }
+    return total; 
+}
+
+let salaries = {
+    John: 100,
+    Ann: 160,
+    Pete: 130
+};
+
+console.log(sumSalaries(salaries)); 
+
+let emptySalaries = {};
+console.log(sumSalaries(emptySalaries));
+
+    </script>
+</html>
