@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>События кнопки</title>
+    <style>
+        #myButton {
+            padding: 10px 20px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <button id="myButton">Нажми меня</button>
+    <div id="output"></div>
+
+    <script>
+        const button = document.getElementById('myButton');
+
+        
+        const handleClick = () => {
+            document.getElementById('output').innerText += 'Кнопка нажата! ';
+        };
+
+        const handleMouseOver = () => {
+            document.getElementById('output').innerText += 'Мышь над кнопкой! ';
+        };
+
+        const handleDoubleClick = function() {
+            document.getElementById('output').innerText += 'Кнопка дважды нажата! ';
+        };
+
+        
+        button.addEventListener('click', handleClick); 
+        button.addEventListener('mouseover', handleMouseOver);
+        button.addEventListener('dblclick', handleDoubleClick);
+
+        
+        button.removeEventListener('mouseover', handleMouseOver);
+        button.removeEventListener('dblclick', handleDoubleClick);
+    </script>
+</body>
+</html>

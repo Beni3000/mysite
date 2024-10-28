@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Проверка строки</title>
+</head>
+<body>
+    <input type="text" id="inputString" placeholder="Введите строку">
+    <button id="submitBtn">Отправить</button>
+    <div id="output"></div>
+
+    <script>
+        function displayString(input) {
+            if (input.length < 4) {
+                throw new Error("Ошибка: строка должна содержать не менее 4 символов.");
+            }
+
+            if (/\d/.test(input)) {
+                throw new Error("Ошибка: строка не должна содержать цифры.");
+            }
+
+            document.getElementById('output').innerText = input;
+        }
+
+        document.getElementById('submitBtn').addEventListener('click', function() {
+            const inputString = document.getElementById('inputString').value;
+
+            try {
+                displayString(inputString);
+            } catch (error) {
+                alert(error.message); 
+            }
+        });
+    </script>
+</body>
+</html>
