@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ru">
+<!-- <head>
+    <meta charset="UTF-8">
+    <title>Задача 1</title>
+    <style>
+        .header { font-size: 24px; }
+    </style>
+</head>
+<body>
+    <h1 class="header" id="header">Заголовок</h1>
+    <button id="changeTextBtn">Изменить текст</button>
+    <script>
+        document.getElementById('changeTextBtn').addEventListener('click', () => {
+            document.getElementById('header').textContent = 'Добро пожаловать!';
+        });
+    </script>
+</body> -->
+
+<!-- <title>Задача 2</title>
+    <style>
+        .description { color: black; }
+        .red { color: red; }
+    </style>
+</head>
+<body>
+    <p class="description">Это описание.</p>
+    <button id="changeColorBtn">Изменить цвет</button>
+    <script>
+        document.getElementById('changeColorBtn').addEventListener('click', function() {
+            document.querySelector('.description').classList.add('red');
+        });
+    </script>
+</body> -->
+
+<!-- <head>
+    <meta charset="UTF-8">
+    <title>Задача 3</title>
+</head>
+<body>
+    <input type="text" id="username" placeholder="Введите имя">
+    <button id="showValueBtn">Показать значение</button>
+    <p id="output"></p> 
+    <script>
+        document.getElementById('showValueBtn').addEventListener('click', function() {
+            const value = document.getElementById('username').value;
+            document.getElementById('output').textContent = value; 
+        });
+    </script>
+</body> -->
+
+<!-- <head>
+    <meta charset="UTF-8">
+    <title>Задача 4</title>
+</head>
+<body>
+    <button id="submit">Отправить</button>
+    <button id="changeButtonTextBtn">Изменить текст</button>
+    <script>
+        document.getElementById('changeButtonTextBtn').addEventListener('click', () => {
+            document.getElementById('submit').textContent = 'Отправлено';
+        });
+    </script>
+</body> -->
+
+<!-- <head>
+    <meta charset="UTF-8">
+    <title>Задача 5</title>
+    <style>
+        .item { padding: 10px; border: 1px solid black; }
+        .active { background-color: yellow; }
+    </style>
+</head>
+<body>
+    <div class="item">Элемент 1</div>
+    <button id="activateItemBtn">Активировать элемент</button>
+    <script>
+        document.getElementById('activateItemBtn').addEventListener('click', () => {
+            document.querySelector('.item').classList.add('active');
+        });
+    </script>
+</body> -->
+
+<!-- <head>
+    <meta charset="UTF-8">
+    <title>Задача 6</title>
+</head>
+<body>
+    <p id="message">Сообщение</p>
+    <button id="setMessageBtn">Установить сообщение</button>
+    <script>
+        const setMessage = () => {
+            document.getElementById('message').textContent = 'Успешно выполнено!';
+        };
+
+        document.getElementById('setMessageBtn').addEventListener('click', setMessage);
+    </script>
+</body> -->
+
+<!-- <head>
+    <meta charset="UTF-8">
+    <title>Задача 7</title>
+    <style>
+        .list-item { padding: 5px; }
+        .highlight { background-color: yellow; }
+    </style>
+</head>
+<body>
+    <ul>
+        <li class="list-item">Элемент 1</li>
+        <li class="list-item">Элемент 2</li>
+        <li class="list-item">Элемент 3</li>
+    </ul>
+    <button id="highlightListBtn">Выделить элементы списка</button>
+    <script>
+        const highlightListItems = () => {
+            document.querySelectorAll('.list-item').forEach(item => {
+                item.classList.add('highlight');
+            });
+        };
+
+        document.getElementById('highlightListBtn').addEventListener('click', highlightListItems);
+    </script>
+</body> -->
+
+<!-- <head>
+    <meta charset="UTF-8">
+    <title>Задача 8</title>
+</head>
+<body>
+    <img id="image" src="img/as-2595.beba2aba.webp" alt="Изображение">
+    <button id="changeImageBtn">Изменить изображение</button>
+    <script>
+        const changeImageSource = () => {
+            document.getElementById('image').src = 'new-image.jpg';
+        };
+
+        document.getElementById('changeImageBtn').addEventListener('click', changeImageSource);
+    </script>
+</body> -->
+
+<!-- <head>
+    <meta charset="UTF-8">
+    <title>Задача 9</title>
+</head>
+<body>
+    <p class="counter" id="counter">0</p>
+    <button id="incrementBtn">Увеличить счетчик</button>
+    <script>
+        const incrementCounter = () => {
+            const counterElement = document.getElementById('counter');
+            let count = parseInt(counterElement.textContent);
+            count++;
+            counterElement.textContent = count;
+        };
+
+        document.getElementById('incrementBtn').addEventListener('click', incrementCounter);
+    </script>
+</body> -->
+
+<!-- <head>
+    <meta charset="UTF-8">
+    <title>Задача 10</title>
+    <style>
+        .title { font-size: 16px; }
+    </style>
+</head>
+<body>
+    <h2 class="title" id="title">Заголовок</h2>
+    <button id="increaseFontSizeBtn">Увеличить размер шрифта</button>
+    <script>
+       
+        const increaseFontSize = () => {
+            document.getElementById('title').style.fontSize = '24px';
+        };
+
+        document.getElementById('increaseFontSizeBtn').addEventListener('click', increaseFontSize);
+    </script>
+</body> -->
+
+<meta charset="UTF-8">
+<title>Задача 11</title>
+<style>
+    .button { color: black; }
+    .white { color: white; }
+</style>
+</head>
+<body>
+<button class="button">Кнопка 1</button>
+<button class="button">Кнопка 2</button>
+<button id="changeButtonColorBtn">Изменить цвет текста кнопок</button>
+<script>
+    const changeButtonColor = () => {
+        document.querySelectorAll('.button').forEach(button => {
+            button.classList.add('white');
+        });
+    };
+
+    document.getElementById('changeButtonColorBtn').addEventListener('click', changeButtonColor);
+</script>
+</body>
+</html>
