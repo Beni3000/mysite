@@ -1,73 +1,101 @@
-<!--method - метот отправки данных на сервер (get или post)
-action - адрес, на который передается данные формы
-RGB - RED GREEN BLUE 
-        01010101  01010101  01010101
--->
 <!DOCTYPE html>
+
 <html>
-    <head>
-        <title>Формы</title>
-    </head>
-    <body>
-        <form action="#" method="post" enctype="application/x-www-form-urlencoded">
-            <p>
-            <label for="login">Логин:</label>
-            <input id="login" name="login" type="text" placeholder="Логин" maxlength="10"/>
-            </p>
+  <head>
+    <title>FormValidation</title>
+    <style>
+        #emailErrors {background-color: brown; color: black; display: none; width: 15%;}
+    </style>
+  </head>
 
-            <p>
-               <label for="password">Пароль:</label>
-               <input name="password" type="password" placeholder="Пароль"/>
-            </p>
+  <body>
+    <form id="myForm" name="myForm">
+      <p>
+        <label for="phone">Телефон:</label>
+        <input type="text" name="phone" id="phone" maxlength="15" minlength="10" required>
+        <div id="phoneErrors"></div>
+          </p>
+      <p>
+        <label for="email">Почта:</label>
+        <input type="email" name="email" id="email" required>
+        <div id="phoneErrors"></div>
+      </p>
+      <p>
+        <label for="age">Возраст:</label>
+        <input type="number" name="age" id="age" min="0" max="150">
+        <div id="phoneErrors"></div>
+      </p>
+      <button type="submit" id="submit" name="submit">Отправить</button>
+    </form>
+  </body>
 
-            <p>
-               <label for="phone">Телефон:</label>
-               <input name="phone" type="text" value="123456789" readonly/>
-               <!-- disabled - поле становется затемненым-->
-            </p>
+  <script>
+     const registerForm = document.myForm;
+     const submit = registerForm.submit;
 
-            <p>
-               <label for="age">Возраст:</label>
-               <input name="age" type="number" min="12" max="120" step="1"/>
-            </p>
+     submit.addEventListener('click', validate);
 
-            <p>
-               <label for="rbutton">Радео-кнопка:</label>
-               <input name="rbutton" type="radio"/>
-            </p>
-            
-            <p>
-                <label for="chbox">Чекбокс:</label>
-                <input name="chbox" type="checkbox"/>
-            </p>
+     function validate(){
+        if(!registerForm.phone.checkValidity()){
+            console.log("Phone is not valid")
+        }
+        if(!registerForm.phone.checkValidity()){
+            console.log("Age is not valid")
+       }
+        if(!registerForm.phone.checkValidity()){
+           console.log("Email is not valid")
+       } 
+       if(  registerForm.phone.validity.valueMissing){
+          registerForm.phone.setCustomValidity("Необходимо ввести номер телефона")
+       }
+    }
 
-            <p>
-                <label for="chbox2">Чекбокс 2:</label>
-                <input name="chbox2" type="checkbox" checked/>
-            </p>
+    const emailField = document.querySelector('#email');
+    const ageField = document.querySelector('#age');
+    const phoneField = document.querySelector('#phone');
+    const emailErrors = document.querySelector('#emailError');
 
-            <p>
-                <label for="color">Цвет:</label>
-                <input name="color" type="color"/>
-            </p>
+    emailField.addEventListener('change', validateEmail);
+    ageField.addEventListener('change', ageChange);
+    ageField.addEventListener('focus', ageChange);
+    phoneField.addEventListener("input", phoneEventInput);
+    let lastValue = "";
 
-            <p>
-                <label for="file">Файл:</label>
-                <input name="file" type="file"/>
-            </p>
+    function validateEmail() {
+        if(!emailField.validity.value){
+            emailErrors.textContent = emailField.validationMessage;
+            emailErrors.style.display = "block"
+        } else {
+            emailErrors.textContent = ""
+            emailErrors.style.display = "nome"
+        } 
+    } 
+    
+    function validateEmail(){
+        console.log("Может валидироватся", emailField.willValidate);
+        console.log("Значение отсутствует", emailField.willValidate);
+        console.log("Значение валидно", emailField.validity.valid);
+        console.log("Значение соответствует типу", emailField.validity.typeMismatch);
+        console.log( emailField.validationMessage);
+    }
 
-            <p>
-                <label for="range">Ползунок:</label>
-                <input name="range" type="range" min="1" max="10" step="1" value="10"/>
-            </p>
+    function ageChange(event){
+        console.log('Изменился возраст');
+        console.log(event);
+        console.log(event.target);
 
-            <p>
-            <input type="submit" value="Войти"/>
-            </p>
+    }
 
-            <p>
-                <input type="reset" value="Сбросить"/>
-            </p>
-        </form>
-    </body>
+    function ageFocus(){
+        console.log("Ввзраст");
+        console.log("В фокусе");
+    }
+
+    function phoneEventInput(event){
+        let lastValue = "";
+        const currentValue = event.target.value;
+        lastValue = currentValue;
+        console.log("Ввели значение", lastValue);
+    }
+  </script>
 </html>

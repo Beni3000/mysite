@@ -1,0 +1,73 @@
+<!--method - метот отправки данных на сервер (get или post)
+action - адрес, на который передается данные формы
+RGB - RED GREEN BLUE 
+        01010101  01010101  01010101
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Формы</title>
+    </head>
+    <body>
+        <form action="#" method="post" enctype="application/x-www-form-urlencoded">
+            <p>
+            <label for="login">Логин:</label>
+            <input id="login" name="login" type="text" placeholder="Логин" maxlength="10"/>
+            </p>
+
+            <p>
+               <label for="password">Пароль:</label>
+               <input name="password" type="password" placeholder="Пароль"/>
+            </p>
+
+            <p>
+               <label for="phone">Телефон:</label>
+               <input name="phone" type="text" value="123456789" readonly/>
+               <!-- disabled - поле становется затемненым-->
+            </p>
+
+            <p>
+               <label for="age">Возраст:</label>
+               <input name="age" type="number" min="12" max="120" step="1"/>
+            </p>
+
+            <p>
+               <label for="rbutton">Радео-кнопка:</label>
+               <input name="rbutton" type="radio"/>
+            </p>
+            
+            <p>
+                <label for="chbox">Чекбокс:</label>
+                <input name="chbox" type="checkbox"/>
+            </p>
+
+            <p>
+                <label for="chbox2">Чекбокс 2:</label>
+                <input name="chbox2" type="checkbox" checked/>
+            </p>
+
+            <p>
+                <label for="color">Цвет:</label>
+                <input name="color" type="color"/>
+            </p>
+
+            <p>
+                <label for="file">Файл:</label>
+                <input name="file" type="file"/>
+            </p>
+
+            <p>
+                <label for="range">Ползунок:</label>
+                <input name="range" type="range" min="1" max="10" step="1" value="10"/>
+            </p>
+
+            <p>
+            <input type="submit" value="Войти"/>
+            </p>
+
+            <p>
+                <input type="reset" value="Сбросить"/>
+            </p>
+        </form>
+    </body>
+</html>
