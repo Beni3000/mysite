@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Форма пароля</title>
+    <style>
+        .message {
+            font-weight: bold;
+        }
+        .success {
+            color: green;
+        }
+        .error {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h2>Введите пароль</h2>
+    <form id="passwordForm">
+        <label for="password">Пароль:</label>
+        <input type="password" id="password" required>
+        <br><br>
+        
+        <label for="confirmPassword">Повторите пароль:</label>
+        <input type="password" id="confirmPassword" required>
+        <br><br>
+        
+        <span id="message" class="message"></span>
+        <br><br>
+        <button type="submit">Отправить</button>
+    </form>
+
+    <script>
+        const passwordInput = document.getElementById('password');
+        const confirmPasswordInput = document.getElementById('confirmPassword');
+        const messageSpan = document.getElementById('message');
+
+        confirmPasswordInput.addEventListener('input', function() {
+            if (confirmPasswordInput.value === passwordInput.value) {
+                messageSpan.textContent = 'Пароли совпадают';
+                messageSpan.className = 'message success';
+            } else {
+                messageSpan.textContent = 'Пароли не совпадают';
+                messageSpan.className = 'message error';
+            }
+        });
+
+        
+        document.getElementById('passwordForm').addEventListener('submit', function(event) {
+            if (passwordInput.value !== confirmPasswordInput.value) {
+                event.preventDefault(); 
+                alert('Пароли не совпадают!');
+            }
+        });
+    </script>
+</body>
+</html>
